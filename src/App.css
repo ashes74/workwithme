@@ -12,10 +12,16 @@
   height: 150px;
   padding: 20px;
   color: white;
+  
+}
+
+.App-header h2{
+  margin: 10px;
 }
 
 .App-intro {
   font-size: large;
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
