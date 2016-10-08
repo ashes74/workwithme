@@ -16,7 +16,7 @@ const routes = (
     <IndexRoute component={Home} /> 
 
     <Route path="jobs" mapMenuTitle="Jobs" component={Jobs}/>
-    <Route path="userform" mapMenuTitle="User-form" component={UserForm}/>
+    <Route path="userform" mapMenuTitle="UserForm" component={UserForm}/>
   </Route>
 
 );
