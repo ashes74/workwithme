@@ -5,46 +5,46 @@ const propTypes = {
   children: PropTypes.element,
 };
 
-function User({ children }) {
+function UserForm({ children }) {
   return (
     <form className="ui form">
       <div className="field">
         <div className="ui checkbox">
-          <input type="checkbox" tabindex="0"/>
+          <input type="checkbox" tabindex="0" ref="isSeeker"/>
           <label>I am seeking job opportunities</label>
         </div>
       </div>
       <div className="fields">
         <div className="field">
           <label>First name</label>
-          <input type="text" placeholder="First Name"/>
+          <input type="text" placeholder="Grace" ref="firstName"/>
         </div>
         <div className="field">
           <label>Last name</label>
-          <input type="text" placeholder="Last Name"/>
+          <input type="text" placeholder="Hopper" ref="lastName"/>
         </div>
       </div>
       <div className="field">
         <label>Company</label>
-        <input type="text" name="company"/>
+        <input type="text" name="company" ref="company"/>
       </div>
       <div className="field">
         <label>Role</label>
-        <input type="text" name="role"/>
+        <input type="text" name="role" ref="role"/>
       </div>
       <div className="field">
         <label>Location</label>
-        <input type="text" name="location"/>
+        <input type="text" name="location" ref="location"/>
       </div>
       <div class="field">
         <label>Tell us a little bit about yourself!</label>
-        <textarea></textarea>
+        <textarea ref="additionalInfo"></textarea>
       </div>
       <button className="ui button" type="submit">Submit</button>
     </form>
   );
 }
 
-User.propTypes = propTypes;
+UserForm.propTypes = propTypes;
 
-export default User;
+export default UserForm;

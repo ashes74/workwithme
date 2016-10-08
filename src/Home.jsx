@@ -16,7 +16,7 @@ function Home({ children }) {
          See Jobs
         </Link></div>}
       {children ||
-        <div><Link to="/user">
+        <div><Link to="/userform">
          Become a User
         </Link></div>}
     </div>
