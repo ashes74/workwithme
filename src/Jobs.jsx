@@ -12,10 +12,10 @@ function Jobs({ children }) {
       <div className="content">
        <img className="right floated mini ui image" src="/images/avatar/large/elliot.jpg"/>
       <div className="header">
-        Elliot Fu
+        LinkedIn
       </div>
       <div className="meta">
-        Friends of Veronika
+        Software Engineer Role
       </div>
       <p>
         This is an example page. Refresh the page or copy/paste the url to
