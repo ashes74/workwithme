@@ -13,7 +13,7 @@ import Home from './Home';
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
-    <IndexRoute component={Home} /> 
+    <IndexRoute component={Home} />
 
     <Route path="jobs" mapMenuTitle="Jobs" component={Jobs}/>
 
