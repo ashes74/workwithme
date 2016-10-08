@@ -15,6 +15,10 @@ function Home({ children }) {
         <div><Link to="/jobs">
          See Jobs
         </Link></div>}
+      {children ||
+        <div><Link to="/userform">
+         Become a User
+        </Link></div>}
     </div>
   );
 }
