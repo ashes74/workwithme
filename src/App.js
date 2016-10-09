@@ -5,19 +5,10 @@ import Home from './Home';
 import UserCard from './UserCard';
 import Banner from './Banner'
 // import base from './base';
-import * as firebase from 'firebase';
-import * as config from './firebase.config.js';
-firebase.initializeApp(config);
+// import * as firebase from 'firebase';
+import * as firebase from './firebase.config.js';
+// firebase.initializeApp(config);
 
-
-// firebase.auth().onAuthStateChanged(function(user) {
-//   if (user) {
-//     console.log('user', user);
-//   console.log('testingggggggg');
-//   } else {
-//     console.log('testingggggggg!!!!!!!!!!');
-//   }
-// });
 class App extends Component {
   constructor(props){
     super(props);
@@ -28,7 +19,7 @@ class App extends Component {
       loading: true
     }
   }
-  
+
   //handle login
   login(){
   console.log("Attempting to login")
@@ -58,7 +49,7 @@ class App extends Component {
             }
         });
     }
-  
+
   // getCards(){
   //   console.log('this is a list', this.state.list);
   //   return this.state.list.map(this.renderCard);
@@ -69,7 +60,7 @@ class App extends Component {
   renderCard(card, key){
     return <UserCard key={key} card={card}/>
   }
-  
+
   render() {
     let children = this.props.children;
     const buttons = [{
@@ -83,9 +74,9 @@ class App extends Component {
       onClick: this.login.bind(this),
       link: "/login",
       visible: !this.state.loggedIn
-    }, 
+    },
     {
-      title: "Logout", 
+      title: "Logout",
       onClick: this.logout.bind(this),
       link: "/logout",
       visible: this.state.loggedIn
@@ -94,13 +85,12 @@ class App extends Component {
 
     return (
       <div className="App">
-  
+
         <Banner buttons = {buttons}/>
-        <button onClick={this.testUser}>User!!</button>
-        <Home/>
+
         <span className="App-intro">
           {children}
-          
+
         </span>
       </div>
     );
@@ -108,39 +98,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// constructor(props, context) {
-//         super(props, context);
-//         this.handleSubmit = this.handleSubmit.bind(this);
-//         // this.testClick = this.testClick.bind(this);
-//         this.state = {
-//           email: '',
-//           pw: '',
-//           error: ''
-//         };
-//     }
-
-//     signout(e) {
-    
-//         firebase.auth().signOut().then(function() {
-//             console.log('signout');
-//         }, function(error) {
-//             console.log(error)
-//         })
-//     }
-    // handleSubmit (e) {
-    //     e.preventDefault();
-    //     var email = this.refs.email.value;
-    //     var pw    = this.refs.pw.value;
-        
-    //     console.log('email', email);
-    //     firebase.auth().signInWithEmailAndPassword(email, pw)
-    //     .then(function(result) {
-    //         this.setState({loggedIn: true});
-    //         browserHistory.push('/userform');
-    //     }, function (error) {
-    //         console.log(error);
-    //         // this.setState({error: e.message});
-    //     })
-    // }

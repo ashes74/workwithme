@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
-import NavContainer from 'react-navbar';
 
 class Banner extends Component {
 
@@ -9,12 +8,8 @@ class Banner extends Component {
         return (visible) ? <Link to={link}><button className="ui button" onClick={onClick}> {title}</button> </Link>: <div></div>
     }
 
-
-
     render() {
         let {buttons} = this.props
-
-
 
         return (
             <div className="App-header">

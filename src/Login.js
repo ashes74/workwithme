@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 // import base from './base';
-import * as firebase from 'firebase';
+import * as firebase from './firebase.config';
 
 class Login extends Component {
     constructor(props, context) {
         super(props, context);
-    
+
         this.state = {
-          
+
         };
     }
-    
+
     handleSubmit (e){
         e.preventDefault();
         var email = this.refs.email.value;
@@ -32,9 +32,9 @@ class Login extends Component {
             this.setState({error: error});
         })
     }
-    
+
     render() {
-        // form onSubmit={} 
+        // form onSubmit={}
         return (
             <form className="ui form">
                 <div className="ui field">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
+import * as firebase from './firebase.config';
 import { browserHistory } from 'react-router';
 
 class Signup extends Component {
@@ -15,7 +15,7 @@ class Signup extends Component {
     }
 
     signout(e) {
-    
+
         firebase.auth().signOut().then(function() {
             console.log('signout');
         }, function(error) {
@@ -26,7 +26,7 @@ class Signup extends Component {
         e.preventDefault();
         var email = this.refs.email.value;
         var pw    = this.refs.pw.value;
-        
+
         console.log('email', email);
         firebase.auth().signInWithEmailAndPassword(email, pw)
         .then(function(result) {
@@ -36,7 +36,7 @@ class Signup extends Component {
             // this.setState({error: e.message});
         })
     }
-    
+
     render() {
         return (
             <div>
