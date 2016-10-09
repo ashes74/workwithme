@@ -37,9 +37,6 @@ class Home extends Component {
 
     return (
       <div>
-        <p>
-          Welcome to "Come Work With Me!!"
-        </p>
         {children ||
           <div><Link to="/jobs">
            See Jobs
@@ -48,7 +45,6 @@ class Home extends Component {
           <div><Link to="/userform">
            Become a User
           </Link></div>}
-           {this.getCards()}
       </div>
     );
   }
