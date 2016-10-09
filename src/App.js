@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 // import logo from './cwwm.png';
 import './App.css';
-var firebase = require('firebase');
-firebase.initializeApp({
-  databaseURL: "https://databaseName.firebaseio.com",
-  serviceAccount: "path/to/serviceAccountCredentials.json"
-});
-var db = firebase.database();
+import Home from './Home';
 
 class App extends Component {
+
   render() {
-      let children = this.props.children;
+    let children = this.props.children;
+
     return (
       <div className="App">
         <div className="App-header">
           <h2>Welcome to Work With Me</h2>
         </div>
-        <button onClick={}>Click me!</button>
+        <button>Click me!</button>
+        <Home/>
         <p className="App-intro">
           {children}
         </p>
