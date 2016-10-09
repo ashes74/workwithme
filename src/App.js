@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Home';
 import UserCard from './UserCard';
+import Banner from './Banner'
 // import base from './base';
 import * as firebase from 'firebase';
 import * as config from './firebase.config.js';
@@ -28,6 +29,21 @@ class App extends Component {
     }
   }
   
+  //handle login
+  login(){
+  console.log("Attempting to login")
+
+  }
+  //handle signin
+  signin(){
+
+  }
+
+  //handle logout
+  logout(){
+
+  }
+
   componentWillMount() {
         firebase.auth().onAuthStateChanged(firebaseUser => {
 
@@ -56,12 +72,30 @@ class App extends Component {
   
   render() {
     let children = this.props.children;
+    const buttons = [{
+      title: "Sign Up",
+      onClick: this.signin.bind(this),
+      link: "/signup",
+      visible: !this.state.loggedIn
+    },
+    {
+      title: "Login",
+      onClick: this.login.bind(this),
+      link: "/login",
+      visible: !this.state.loggedIn
+    }, 
+    {
+      title: "Logout", 
+      onClick: this.logout.bind(this),
+      link: "/logout",
+      visible: this.state.loggedIn
+    }
+    ]
 
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Welcome to Work With Me</h2>
-        </div>
+  
+        <Banner buttons = {buttons}/>
         <button onClick={this.testUser}>User!!</button>
         <Home/>
         <span className="App-intro">
@@ -74,3 +108,39 @@ class App extends Component {
 }
 
 export default App;
+
+
+// constructor(props, context) {
+//         super(props, context);
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//         // this.testClick = this.testClick.bind(this);
+//         this.state = {
+//           email: '',
+//           pw: '',
+//           error: ''
+//         };
+//     }
+
+//     signout(e) {
+    
+//         firebase.auth().signOut().then(function() {
+//             console.log('signout');
+//         }, function(error) {
+//             console.log(error)
+//         })
+//     }
+    // handleSubmit (e) {
+    //     e.preventDefault();
+    //     var email = this.refs.email.value;
+    //     var pw    = this.refs.pw.value;
+        
+    //     console.log('email', email);
+    //     firebase.auth().signInWithEmailAndPassword(email, pw)
+    //     .then(function(result) {
+    //         this.setState({loggedIn: true});
+    //         browserHistory.push('/userform');
+    //     }, function (error) {
+    //         console.log(error);
+    //         // this.setState({error: e.message});
+    //     })
+    // }
