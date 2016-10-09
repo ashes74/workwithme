@@ -48,7 +48,9 @@ class Home extends Component {
           <div><Link to="/userform">
            Become a User
           </Link></div>}
-           {this.getCards()}
+          <div className="ui cards">
+            {this.getCards()}
+          </div>
       </div>
     );
   }
