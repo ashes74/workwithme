@@ -25,7 +25,7 @@ class UserCard extends Component {
           </span>
         </div>
         <div>
-          <button>Contact Me</button>
+          <button className="ui secondary button">Contact Me</button>
         </div>
       </div>
     );
