@@ -40,7 +40,7 @@ class UserForm extends Component {
     data: newUser,
     then(err){
       if(!err){
-        console.log('all is well!');
+        //do nothing
       }
     }
   });
@@ -55,11 +55,9 @@ class UserForm extends Component {
             <label>I am seeking job opportunities</label>
           </div>
         </div>
-        <div className="fields">
-          <div className="field">
-            <label>Name</label>
-            <input type="text" ref="name"/>
-          </div>
+        <div className="field">
+          <label>Name</label>
+          <input type="text" ref="name"/>
         </div>
         <div className="field">
           <label>Company</label>
@@ -82,10 +80,10 @@ class UserForm extends Component {
           <textarea ref="additionalInfo"></textarea>
         </div>
         <div classNAme="field">
-          <label>Post a picture of yourself!</label>
+          <label>Url of your picture</label>
           <input type="text" name="iamge" ref="image"/>
         </div>
-        <button className="ui button" type="submit">Submit</button>
+        <button className="ui field button" type="submit">Submit</button>
       </form>
     );
   }

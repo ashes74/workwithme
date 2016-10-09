@@ -13,7 +13,6 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to Work With Me</h2>
         </div>
-        <button>Click me!</button>
         <Home/>
         <p className="App-intro">
           {children}
