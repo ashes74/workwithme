@@ -26,8 +26,8 @@ function Jobs({ children }) {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat sed doloribus fugit commodi non debitis magnam fugiat ea vitae, facere sit veritatis saepe possimus, assumenda, ullam cumque adipisci blanditiis!
       </p>
       {children ||
-        <div><Link to="/example/two-deep?field1=foo&field2=bar#boom!">
-          Example two deep with query and hash
+        <div><Link to="/detail/1">
+          Detail Page
         </Link></div>}
         </div>
       </div>

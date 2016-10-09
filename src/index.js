@@ -13,7 +13,7 @@ import UserForm from './UserForm';
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
-    <IndexRoute component={Home} /> 
+    <IndexRoute component={Home} />
 
     <Route path="jobs" mapMenuTitle="Jobs" component={Jobs}/>
     <Route path="userform" mapMenuTitle="UserForm" component={UserForm}/>
