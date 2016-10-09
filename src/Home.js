@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import UserCard from './UserCard';
 import * as firebase from './firebase.config';
+import base from './base';
 
 class Home extends Component {
   constructor(props){
@@ -15,10 +16,13 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    var peoples = firebase.database().ref('People/');
-    peoples.on('value', function(snapshot) {
-      this.state.list = Array.from(snapshot.val());
-      this.setState({list: this.state.list});
+    this.ref = base.syncState('People', {
+      context: this,
+      state: 'list',
+      asArray: true,
+      then(){
+        this.setState({loading: false})
+      }
     });
   }
 
@@ -29,7 +33,6 @@ class Home extends Component {
   getCards(){
     return this.state.list.map(this.renderCard);
   }
-
 
   render() {
     let children = this.props.children;
