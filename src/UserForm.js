@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 
 const propTypes = {
   children: PropTypes.element,
@@ -10,7 +9,7 @@ function UserForm({ children }) {
     <form className="ui form">
       <div className="field">
         <div className="ui checkbox">
-          <input type="checkbox" tabindex="0" ref="isSeeker"/>
+          <input type="checkbox" tabIndex="0" ref="isSeeker"/>
           <label>I am seeking job opportunities</label>
         </div>
       </div>
@@ -36,7 +35,7 @@ function UserForm({ children }) {
         <label>Location</label>
         <input type="text" name="location" ref="location"/>
       </div>
-      <div class="field">
+      <div className="field">
         <label>Tell us a little bit about yourself!</label>
         <textarea ref="additionalInfo"></textarea>
       </div>
