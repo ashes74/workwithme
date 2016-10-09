@@ -55,7 +55,7 @@ class App extends Component {
     const buttons = [{
       title: "Sign Up",
       onClick: this.signin.bind(this),
-      link: "/signup",
+      link: "/userform",
       visible: !this.state.loggedIn
     },
     {
