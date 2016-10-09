@@ -49,40 +49,47 @@ class UserForm extends Component {
 
   render() {
     return (
-      <form className="ui form" onSubmit={this.submitForm.bind(this)}>
+      <form className="ui container segment form" onSubmit={this.submitForm.bind(this)}>
         <div className="field">
-          <div className="ui checkbox">
+          <div className="ui checkbox field">
             <input type="checkbox" ref="isSeeker"/>
             <label>I am seeking job opportunities</label>
           </div>
         </div>
-        <div className="field">
-          <label>Name</label>
-          <input type="text" ref="name"/>
+        <div className="two fields">
+          <div className="field">
+            <label>Name</label>
+            <input type="text" ref="name"/>
+          </div>
+          <div className="field">
+            <label>Company</label>
+            <input type="text" name="company" ref="company"/>
+          </div>
         </div>
-        <div className="field">
-          <label>Company</label>
-          <input type="text" name="company" ref="company"/>
+
+        <div className="two fields">
+          <div className="field">
+            <label>Role</label>
+            <input type="text" name="role" ref="role"/>
+          </div>
+          <div className="field">
+            <label>@ Current Role Since</label>
+            <input type="text" name="since" ref="since"/>
+          </div>
         </div>
-        <div className="field">
-          <label>Role</label>
-          <input type="text" name="role" ref="role"/>
-        </div>
-        <div className="field">
-          <label>@ Current Role Since</label>
-          <input type="text" name="since" ref="since"/>
-        </div>
-        <div className="field">
-          <label>Location</label>
-          <input type="text" name="location" ref="location"/>
+        <div className="two fields">
+          <div className="field">
+            <label>Location</label>
+            <input type="text" name="location" ref="location"/>
+          </div>
+          <div className="ui field">
+            <label>Add a url to your picture</label>
+            <input type="text" name="iamge" ref="image"/>
+          </div>
         </div>
         <div className="field">
           <label>Tell us a little bit about yourself!</label>
           <textarea ref="additionalInfo"></textarea>
-        </div>
-        <div classNAme="field">
-          <label>Url of your picture</label>
-          <input type="text" name="iamge" ref="image"/>
         </div>
         <button className="ui field button" type="submit">Submit</button>
       </form>
