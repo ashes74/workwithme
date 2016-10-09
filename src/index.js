@@ -7,7 +7,7 @@ import './index.css';
 // import 'current-input';
 import Jobs from './Jobs';
 import Home from './Home';
-import UserForm from './UserForm';
+import UserFormView from './UserFormView';
 
 
 
@@ -16,7 +16,7 @@ const routes = (
     <IndexRoute component={Home} />
 
     <Route path="jobs" mapMenuTitle="Jobs" component={Jobs}/>
-    <Route path="userform" mapMenuTitle="UserForm" component={UserForm}/>
+    <Route path="userform" mapMenuTitle="UserFormView" component={UserFormView}/>
   </Route>
 
 );
