@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import logo from './cwwm.png';
+// import logo from './cwwm.png';
 import './App.css';
+var firebase = require('firebase');
+firebase.initializeApp({
+  databaseURL: "https://databaseName.firebaseio.com",
+  serviceAccount: "path/to/serviceAccountCredentials.json"
+});
+var db = firebase.database();
 
 class App extends Component {
   render() {
@@ -8,9 +14,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Work With Me</h2>
         </div>
+        <button onClick={}>Click me!</button>
         <p className="App-intro">
           {children}
         </p>

@@ -1,17 +1,21 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import UserCard from './UserCard';
+import database from './firebase';
+console.log(database);
 
 const propTypes = {
   children: PropTypes.element,
 };
 
 function Home({ children }) {
+
   let renderCard = function(card, key){
     return <UserCard key={key} card={card}/>
   };
   let getCards = function(){
     //api call would go here!!!!!
+    // firebase.get('what we want')
     return [{
       name: 'Missy Coolperson',
       description: 'Missy is a cool person!',
@@ -25,7 +29,7 @@ function Home({ children }) {
   return (
     <div>
 
-   
+
 
       <p>
         Welcome to "Come Work With Me!!"
