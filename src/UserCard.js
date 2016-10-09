@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class UserCard extends Component {
   render() {
       let {children, card} = this.props;
-      let {Name, Location, Since, description, Image} = card;
+      let {Name, Location, Since, Description, Image} = card;
 
     return (
       <div className="card">
@@ -16,13 +16,16 @@ class UserCard extends Component {
           <span className="date">@ current role since {Since}</span>
         </div>
         <div className="description">
-          {description}
+          {Description}
         </div>
         </div>
         <div className="extra content">
           <span>
             {Location}
           </span>
+        </div>
+        <div>
+          <button>Contact Me</button>
         </div>
       </div>
     );
