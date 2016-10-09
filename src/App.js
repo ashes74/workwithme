@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './cwwm.png';
 import './App.css';
-import Home from './Home';
 
 class App extends Component {
 
@@ -14,7 +13,6 @@ class App extends Component {
           <h2>Welcome to Work With Me</h2>
         </div>
         <button>Click me!</button>
-        <Home/>
         <p className="App-intro">
           {children}
         </p>
