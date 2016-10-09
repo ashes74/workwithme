@@ -77,9 +77,7 @@ class App extends Component {
         <div className="App-header">
           <Banner buttons = {buttons}/>
         </div>
-
         <span className="App-intro">
-
           {children}
 
         </span>
