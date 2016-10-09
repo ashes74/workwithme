@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 class UserCard extends Component {
   render() {
       let {children, card} = this.props;
-      let {name, location, year, description, image} = card;
+      let {Name, Location, year, description, image} = card;
     return (
       <div className="ui card">
         <div className="image">
           <img src={image}/>
         </div>
       <div className="content">
-        <a className="header">{name}</a>
+        <a className="header">{Name}</a>
         <div className="meta">
           <span className="date">@ current role since {year}</span>
         </div>
@@ -20,7 +20,7 @@ class UserCard extends Component {
         </div>
         <div className="extra content">
           <span>
-            {location}
+            {Location}
           </span>
         </div>
       </div>
