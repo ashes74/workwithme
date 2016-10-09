@@ -7,6 +7,6 @@ var config = {   apiKey: "AIzaSyBD83Lu6kwaquSS4y_RayZwHu8uhhi53YE",
     // messagingSenderId: "342531660792"
 }
 
-var initialized = firebase.initializeApp(config);
+var initialized = firebase.initializeApp(config, "Second");
 
 module.exports = initialized;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
+import {Link} from 'react-router';
+import './Banner.css';
 
 class Banner extends Component {
 
@@ -12,7 +13,7 @@ class Banner extends Component {
         let {buttons} = this.props
 
         return (
-            <div className="App-header">
+            <div>
                 <h2>Welcome to Work With Me</h2>
 
                 <div class="large ui buttons right">

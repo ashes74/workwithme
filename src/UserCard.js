@@ -3,25 +3,29 @@ import React, { Component } from 'react';
 class UserCard extends Component {
   render() {
       let {children, card} = this.props;
-      let {Name, Location, year, description, image} = card;
+      let {Name, Location, Since, Description, Image} = card;
+
     return (
-      <div className="ui card">
+      <div className="card">
         <div className="image">
-          <img src={image}/>
+          <img src={Image}/>
         </div>
       <div className="content">
         <a className="header">{Name}</a>
         <div className="meta">
-          <span className="date">@ current role since {year}</span>
+          <span className="date">@ current role since {Since}</span>
         </div>
         <div className="description">
-          {description}
+          {Description}
         </div>
         </div>
         <div className="extra content">
           <span>
             {Location}
           </span>
+        </div>
+        <div>
+          <button className="ui secondary button">Contact Me</button>
         </div>
       </div>
     );

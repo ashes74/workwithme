@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-// import logo from './cwwm.png';
 import './App.css';
 import Home from './Home';
 import UserCard from './UserCard';
 import Banner from './Banner'
-// import base from './base';
-// import * as firebase from 'firebase';
 import * as firebase from './firebase.config.js';
-// firebase.initializeApp(config);
 
 class App extends Component {
   constructor(props){
@@ -50,13 +46,6 @@ class App extends Component {
         });
     }
 
-  // getCards(){
-  //   console.log('this is a list', this.state.list);
-  //   return this.state.list.map(this.renderCard);
-  // }
-  testUser() {
-    console.log('user!!!!!!!', firebase.auth().currentUser);
-  }
   renderCard(card, key){
     return <UserCard key={key} card={card}/>
   }
@@ -85,9 +74,9 @@ class App extends Component {
 
     return (
       <div className="App">
-
-        <Banner buttons = {buttons}/>
-
+        <div className="App-header">
+          <Banner buttons = {buttons}/>
+        </div>
         <span className="App-intro">
           {children}
 
