@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 class UserCard extends Component {
   render() {
       let {children, card} = this.props;
-      let {Name, Location, year, description, image} = card;
+      let {Name, Location, Since, description, Image} = card;
+
     return (
-      <div className="ui card">
+      <div className="card">
         <div className="image">
-          <img src={image}/>
+          <img src={Image}/>
         </div>
       <div className="content">
         <a className="header">{Name}</a>
         <div className="meta">
-          <span className="date">@ current role since {year}</span>
+          <span className="date">@ current role since {Since}</span>
         </div>
         <div className="description">
           {description}
