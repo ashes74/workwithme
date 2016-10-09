@@ -13,8 +13,6 @@ import UserFormView from './UserFormView';
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
-    <IndexRoute component={Home} />
-
     <Route path="jobs" mapMenuTitle="Jobs" component={Jobs}/>
     <Route path="userform" mapMenuTitle="UserFormView" component={UserFormView}/>
   </Route>
