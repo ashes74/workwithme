@@ -24,7 +24,21 @@ function Home({ children }) {
 
   return (
     <div>
-    {getCards()}
+
+   
+
+      <p>
+        Welcome to "Come Work With Me!!"
+      </p>
+      {children ||
+        <div><Link to="/jobs">
+         See Jobs
+        </Link></div>}
+      {children ||
+        <div><Link to="/userform">
+         Become a User
+        </Link></div>}
+         {getCards()}
     </div>
   );
 }
