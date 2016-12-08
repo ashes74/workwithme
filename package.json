@@ -1,6 +1,9 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "6.4.0"
+  },
   "private": true,
   "homepage": "http://ashes74.github.io/workwithme",
   "devDependencies": {
